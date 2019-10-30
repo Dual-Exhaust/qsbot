@@ -15,6 +15,6 @@ setup(name='qsbot',
     license='MIT',
     packages=['qsbot'],
     python_requires='>=3.7',
-    install_requires=['discord.py==1.2.4']
+    install_requires=['discord.py==1.2.4'],
     include_package_data=True,
     zip_safe=False)

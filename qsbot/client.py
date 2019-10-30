@@ -31,7 +31,7 @@ class client(commands.Bot):
     async def on_raw_reaction_add(self, payload):
         # Only tries to add a role if self.reactions/self.roles_for_reactions is bigger than zero, meaning that add_reaction_for_role has been called once
         # self.reaction_for_role_channel must be set before this can work so we check if set_reaction_for_role_channel has been called
-        if len(self.reactions > 0) and not self.reaction_for_role_channel is None:
+        if len(self.reactions) > 0 and not self.reaction_for_role_channel is None:
             guild = self.get_guild(payload.guild_id)
             # Checks if the channel that was reacted in is set as the channel we want to look for reactions
             if payload.channel_id == self.reaction_for_role_channel or self.get_channel(payload.channel_id).name == self.reaction_for_role_channel:
@@ -41,7 +41,16 @@ class client(commands.Bot):
             if payload.emoji.name in self.reactions:
                 role = discord.utils.get(guild.roles, name=self.roles_for_reactions[self.reactions.index(payload.emoji.name)])
                 await member.add_roles(role)
-
+    async def on_raw_reaction_remove(self, payload):
+        if len(self.reactions) > 0 and not self.reaction_for_role_channel is None:
+            guild = self.get_guild(payload.guild_id)
+            if payload.channel_id == self.reaction_for_role_channel or self.get_channel(payload.channel_id).name == self.reaction_for_role_channel:
+                member = discord.utils.get(guild.members, name=self.get_user(payload.user_id).name)
+            else:
+                return
+            if payload.emoji.name in self.reactions:
+                role = discord.utils.get(guild.roles, name=self.roles_for_reactions[self.reactions.index(payload.emoji.name)])
+                await member.remove_roles(role)
 
     # ==================================Using Prefixes=================================
     def get_prefixes(self):
