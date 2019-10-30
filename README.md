@@ -80,6 +80,24 @@ Simply returns the set welcome message. Returns None if it has not been set.
 
 > Usage: client.get_welcome_message()
 
+### On Ready
+
+#### set_on_ready_message
+
+Sets the message that gets printed to console when on_ready gets called.
+
+> Usage: client.set_on_ready_message( <nessage> )
+  
+#### get_on_ready_message
+
+Returns the message that gets printed when on_ready triggers. Returns None if not set.
+
+> Usage: client.get_on_ready_message()
+
+#### on_ready
+
+When this triggers, the on_ready_message is printed to console and if a presence has already been specified, then it gets set. It does trigger at some odd times though, read the [docs](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready) for more info about it. 
+
 ### Command Error Behavior
 
 #### on_command_error
