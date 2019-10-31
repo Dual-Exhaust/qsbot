@@ -9,6 +9,14 @@ An extension of the discord.py library that makes the initial creation of a bot'
 * Set single or multiple prefixes for commands.
 * Built in command error catch. (Probably will end up phasing this out or replacing it with something more practical)
 
+## Roadmap
+
+- [x] Basic examples
+- [ ] Command to install examples
+- [ ] Command to get basic starting code for bot creation
+- [ ] Server statistics
+- [ ] Cog support
+
 ## Install
 
 Not yet on PyPI, I am waiting until this has more features before I add it there. You can still clone this repo and install from there though.
