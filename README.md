@@ -86,7 +86,7 @@ Simply returns the set welcome message. Returns None if it has not been set.
 
 Sets the message that gets printed to console when on_ready gets called.
 
-> Usage: client.set_on_ready_message( <nessage> )
+> Usage: client.set_on_ready_message( <message> )
   
 #### get_on_ready_message
 
