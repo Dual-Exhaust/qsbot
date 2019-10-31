@@ -36,13 +36,13 @@ The logic behind adding and removing a reaction to add and remove a role is prov
 
 Used to set which channel that the bot will listen to for when users add reactions to gain roles in the server. This must be set before you can use add_reaction_for_role. The channel can be passed as a channel id or as a channel name.
 
-> Usage: client.set_reaction_for_role_channel( <channel> )
+> Usage: client.set_reaction_for_role_channel( \<channel> )
   
 #### add_reaction_for_role
 
 Used to link what reactions give which roles. The first parameter is the reaction name and the second is the role name. These are case sensative and as far as I know only work with custom emojis at the moment.
 
-> Usage: client.add_reaction_for_role( <reaction name>, <role name> )
+> Usage: client.add_reaction_for_role( \<reaction name>, \<role name> )
 
 ### Prefixes
 
@@ -64,7 +64,7 @@ Used to return what the current prefixes are. Currently broken, and may also be 
 
 Used to set the bots presence in discord. The parameter is a string. Custom statuses have not yet been looked at.
 
-> Usage: client.set_presence( <presence> )
+> Usage: client.set_presence( \<presence> )
 
 ### Welcome Message
 
@@ -72,7 +72,7 @@ Used to set the bots presence in discord. The parameter is a string. Custom stat
 
 Sets the welcome message that is sent to the user when they join the server. If this is not set then the default behavior is to send no welcome message. The command can be passed a discord.Embed object or a regular string.
 
-> Usage: client.set_welcome_message( <welcome message> )
+> Usage: client.set_welcome_message( \<welcome message> )
 
 #### get_welcome_message
 
@@ -86,7 +86,7 @@ Simply returns the set welcome message. Returns None if it has not been set.
 
 Sets the message that gets printed to console when on_ready gets called.
 
-> Usage: client.set_on_ready_message( <message> )
+> Usage: client.set_on_ready_message( \<message> )
   
 #### get_on_ready_message
 
