@@ -16,6 +16,7 @@ An extension of the discord.py library that makes the initial creation of a bot'
 - [ ] Command to get basic starting code for bot creation
 - [ ] Server statistics
 - [ ] Cog support
+- [ ] Easy load token
 
 ## Install
 
