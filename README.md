@@ -8,12 +8,13 @@ An extension of the discord.py library that makes the initial creation of a bot'
 * Set welcome message and discord presence.
 * Set single or multiple prefixes for commands.
 * Built in command error catch. (Probably will end up phasing this out or replacing it with something more practical)
+* Generate starting code from the command line
 
 ## Roadmap
 
 - [x] Basic examples
 - [x] Command to install examples
-- [ ] Command to get basic starting code for bot creation
+- [x] Command to get basic starting code for bot creation
 - [ ] Server statistics
 - [ ] Cog support
 - [ ] Easy load token
@@ -35,6 +36,19 @@ pip install .
 A command line function that creates a sub-directory containing the qsbot examples in the current working directory.
 
 > Usage: qs_install_examples
+
+### makebot
+
+A command line function that generates code for you to start with.
+
+> Usage: makebot
+
+*Optional arguments*
+
+* -F  | --filename : The name of the file generated. If not specified, it will be 'basic_bot.py' by default.
+* -W  | --welcome  : The welcome message that your bot should send to new members. 
+* -P  | --prefix   : The prefix that your bot should use, if not set it is '$' by default.
+* -Pr | --presence : The discord presence of your bot.
 
 ## qsbot.client
 
