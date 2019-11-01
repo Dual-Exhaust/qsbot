@@ -1,5 +1,5 @@
 #!/usr/bin/python
 
-import qsbot.basicbot
+import qsbot.basicbot as qs
 
-
+qs.parse_command()
