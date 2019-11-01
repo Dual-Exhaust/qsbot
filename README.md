@@ -12,7 +12,7 @@ An extension of the discord.py library that makes the initial creation of a bot'
 ## Roadmap
 
 - [x] Basic examples
-- [ ] Command to install examples
+- [x] Command to install examples
 - [ ] Command to get basic starting code for bot creation
 - [ ] Server statistics
 - [ ] Cog support
@@ -20,7 +20,7 @@ An extension of the discord.py library that makes the initial creation of a bot'
 
 ## Install
 
-Not yet on PyPI, I am waiting until this has more features before I add it there. You can still clone this repo and install from there though.
+Not yet on PyPI, I am waiting until this has more features before I add it there, but if this gets some stars then I may consider adding it early. You can still clone this repo and install from there though.
 
 ```
 git clone https://github.com/Dual-Exhaust/qsbot
@@ -29,6 +29,12 @@ cd qsbot
 
 pip install .
 ``` 
+
+### qs_install_examples
+
+A command line function that creates a sub-directory containing the qsbot examples in the current working directory.
+
+> Usage: qs_install_examples
 
 ## qsbot.client
 
