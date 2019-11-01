@@ -7,7 +7,7 @@ def parse_command():
     parser.add_argument("-P", "--prefix", help="Sets the prefixes to use")
     parser.add_argument("-Pr", "--presence", help="Sets the discord presence")
     parser.add_argument("-F", "--filename", help="Sets the file name to be saved to")
-
+    parser.add_argument("-R", "--react", help="Sets the number of react for role links you want")
     args = parser.parse_args()
 
     filename = 'basic_bot.py'
@@ -41,5 +41,14 @@ def parse_command():
         with open(filename, 'a') as bot_file:
             bot_file.write("client.set_presence('" + args.presence + "')\n\n")
 
+    if args.react:
+        if args.react.isdigit():
+            num = int(args.react)
+            with open(filename, 'a') as bot_file:
+                for x in range(num):
+                    bot_file.write("client.add_reaction_for_role('reaction" + str(x) + "', 'role" + str(x) + "')\n" )
+
+
+
     with open(filename, 'a') as bot_file:
-        bot_file.write("client.run('DISCORD TOKEN')\n\n")
+        bot_file.write("\nclient.run('DISCORD TOKEN')\n\n")
