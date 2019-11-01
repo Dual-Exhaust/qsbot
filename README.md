@@ -4,10 +4,10 @@ An extension of the discord.py library that makes the initial creation of a bot'
 
 ## Features
 
-* Built in functions for easy 'react for role' setup.
-* Set welcome message and discord presence.
-* Set single or multiple prefixes for commands.
-* Built in command error catch. (Probably will end up phasing this out or replacing it with something more practical)
+* Built in functions for easy 'react for role' setup
+* Set welcome message and discord presence
+* Set single or multiple prefixes for commands
+* Built in command error catch (Probably will end up phasing this out or replacing it with something more practical)
 * Generate starting code from the command line
 
 ## Roadmap
@@ -49,6 +49,7 @@ A command line function that generates code for you to start with.
 * -W  | --welcome  : The welcome message that your bot should send to new members. 
 * -P  | --prefix   : The prefix that your bot should use, if not set it is '$' by default.
 * -Pr | --presence : The discord presence of your bot.
+* -R  | --react    : How many 'react for role' calls to generate.
 
 ## qsbot.client
 
