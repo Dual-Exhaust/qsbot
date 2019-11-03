@@ -95,7 +95,18 @@ class client(commands.Bot):
 
     def set_on_ready_message(self, message):
         self.on_ready_message = message
-
+    # ===========================================Statistics==============================================
+    @staticmethod
+    def get_role_counts(guild):
+        role_dict = {}
+        for role in guild.roles:
+            for member in guild.members:
+                if role in member.roles:
+                    if role.name in role_dict:
+                        role_dict[role.name] += 1
+                    else:
+                        role_dict[role.name] = 1
+        return role_dict
     # ========================================Generic Command Error======================================
     @staticmethod
     async def on_command_error(ctx, error):
