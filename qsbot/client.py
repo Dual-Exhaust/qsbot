@@ -107,6 +107,15 @@ class client(commands.Bot):
                     else:
                         role_dict[role.name] = 1
         return role_dict
+    
+    @staticmethod
+    def get_player_join_dates(guild):
+        dates_dict = {}
+        for member in guild.members:
+            dates_dict[member] = member.joined_at
+        return dates_dict
+
+
     # ========================================Generic Command Error======================================
     @staticmethod
     async def on_command_error(ctx, error):
