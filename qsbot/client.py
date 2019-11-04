@@ -112,7 +112,7 @@ class client(commands.Bot):
     def get_player_join_dates(guild):
         dates_dict = {}
         for member in guild.members:
-            dates_dict[member] = member.joined_at
+            dates_dict[member.name] = member.joined_at
         return dates_dict
 
 
